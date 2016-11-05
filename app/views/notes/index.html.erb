@@ -1,0 +1,20 @@
+
+<% @notes.each do |note| %>
+<div class="col-sm-2" style="background: #fff; padding:10px">
+<h2 style="color:#000000"><%= link_to note.title, note, class: 'no-link' %></h2> 
+<p style="color:#000000"><%= note.content %></p>
+<p style="color:#000000;"><small><%= time_ago_in_words(note.created_at) %></small></p>
+</div>
+
+<div class="col-sm-1"><br /></div>
+
+<% end %>
+<br />
+<br />
+<br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<div>
+<%= link_to "New Note", new_note_path %>
+</div>
+
+
