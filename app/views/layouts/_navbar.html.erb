@@ -20,15 +20,15 @@
       <%= link_to image_tag("1.png", alt: "logo"),
         '/', class: 'logo'  %>
     </div>
-    <ul class="nav navbar-nav navbar-right">
-      <li><%= link_to("Sign Up", new_user_registration_path)  %></li>
+    <ul>
+      <li class="btn btn-default navbar-btn navbar-right"><%= link_to("Sign Up", new_user_registration_path)  %></li>
      
       <% if user_signed_in? %>
-  <li>
+  <li class="btn btn-default navbar-btn navbar-right">
   <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
   </li>
 <% else %>
-  <li>
+  <li class="btn btn-default navbar-btn navbar-right">
   <%= link_to('Login', new_user_session_path)  %>  
   </li>
 <% end %>
