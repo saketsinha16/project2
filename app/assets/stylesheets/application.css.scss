@@ -21,7 +21,7 @@ body {
 	text-decoration: none;
 }
 .background_image{
-    background: url(https://appnote1.herokuapp.com/assets/images/bg.jpg);
+    background: asset-data-url("bg.jpg");
   -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
